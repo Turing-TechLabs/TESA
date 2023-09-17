@@ -12,13 +12,34 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
 </head>
 <style>
-    body {
-        padding-top: 64px; /* Adjust the value to match the height of your navigation bar */
-        background-color: white; /* Set a light background color */
-        scroll-behavior: smooth; /* Add a transition effect when scrolling */
-        /* Add animations */
+     body {
+        padding-top: 64px;
+        background-color: #f7fafc;
+        scroll-behavior: smooth;
         animation-name: fadein;
-        animation-duration: 1.5s;
+        animation-duration: 5s;
+    }
+
+    @media (max-width: 768px) {
+        .mobile-nav-toggle {
+            display: block;
+        }
+
+        .desktop-nav {
+            display: none;
+        }
+    }
+
+    /* Style for desktop navigation menu */
+    @media (min-width: 769px) {
+        .mobile-nav-toggle {
+            display: none;
+        }
+
+        .desktop-nav {
+            display: block;
+        }
+
     }
 
     /* Style for the carousel container */
