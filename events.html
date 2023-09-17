@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+</head>
+<style>
+    body {
+        padding-top: 64px; /* Adjust the value to match the height of your navigation bar */
+        background-color: white; /* Set a light background color */
+        scroll-behavior: smooth; /* Add a transition effect when scrolling */
+        /* Add animations */
+        animation-name: fadein;
+        animation-duration: 1.5s;
+    }
+
+    /* Style for the carousel container */
+    .carousel-container {
+        position: relative;
+    }
+
+    /* Style for the overlay */
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+        z-index: 1;
+    }
+
+    /* Style for the text */
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white; /* Text color */
+        text-align: center;
+        z-index: 2;
+        padding: 20px;
+    }
+</style>
+
+<body class="dark:bg-gray-900 dark:text-white"> <!-- Apply dark mode to the entire body -->
+
+
+<nav class="bg-white dark:bg-gray-900 fixed w-full z-30 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="./index.html" class="flex items-center">
+        <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo"> -->
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">TESA, PVG</span>
+    </a>
+    <div class="flex md:order-2">
+        <button type="button" class="text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-red-400 dark:hover:bg-red-500 dark:focus:ring-red-600">Get started</button>
+        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+    </div>
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <li>
+          <a href="./index.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover-bg-transparent md:hover-text-red-700 md:p-0 md:dark:hover-text-blue-500 dark:text-white dark:hover-bg-gray-700 dark:hover-text-white md:dark-hover-bg-transparent dark:border-gray-700" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-white bg-red-500 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500">Events</a>
+        </li>
+        <li>
+          <a href="./team.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover-bg-transparent md:hover-text-red-700 md:p-0 md:dark:hover-text-blue-500 dark:text-white dark:hover-bg-gray-700 dark:hover-text-white md:dark-hover-bg-transparent dark:border-gray-700">People</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover-bg-transparent md:hover-text-red-700 md:p-0 md:dark:hover-text-blue-500 dark:text-white dark:hover-bg-gray-700 dark:hover-text-white md:dark-hover-bg-transparent dark:border-gray-700">Contact</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+  <style>
+    #wall {   
+        background-image: url('./light-bulb-lightbulb-bulb-electricity.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        animation-name: fadein;
+        animation-duration: 1.5s;
+    }
+    #wall1 {   
+        background-image: url('./PVGTESAIMG.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        animation-name: fadein;
+        animation-duration: 1.5s;
+    }
+    #timeline {
+        /* Corners rounded and opacity low */
+        border-radius: 10px;
+        opacity: 0.9;
+    }
+    #timeline h3{
+        /* Change font color  */
+        color: #000000;
+        margin: 5%;
+    }
+  </style>
+
+ 
+
+<section class="bg-red-100 dark:bg-gray-900 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern.svg')] dark:bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')]">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative">
+        <a href="#" class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-red-700 bg-red-200 rounded-full dark:bg-blue-900 dark:text-blue-300 hover:bg-red-300 dark:hover:bg-red-800">
+            <span class="text-xs bg-red-600 rounded-full text-white px-4 py-1.5 mr-3">New</span> <span class="text-sm font-medium">Techcraft 2023 is coming</span> 
+            <svg class="w-2.5 h-2.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+        </a>
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">From Ideas to Impact</h1>
+        <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-200">Glorious events by TESA</p>
+        
+    </div>
+    <!-- <div class="bg-gradient-to-b from-blue-900 to-transparent dark:from-blue-900 w-100% h-100% absolute top-0 left-0 z-0 my-10"></div> -->
+</section>
+
+<section class="bg-gray-white py-16">
+    <div class="container mx-auto my-10 px-auto py-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-black text-center my-8 ">Flagship TESA Events</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-20">
+            <!-- Event 1: Technovation -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Technovation</h3>
+                <p class="text-gray-600 mb-4">Technovation is a national-level circuit design and simulation competition to showcase your innovative projects and ideas. Stay tuned for registration details and event dates!</p>
+                <a href="#" class="text-blue-600 hover:underline">Coming soon</a>
+            </div>
+
+            <!-- Event 2: Ablaze -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Ablaze</h3>
+                <p class="text-gray-600 mb-4">Ablaze is a non technical event by TESA, giving students opportunity to showcase their extra-curricular skillsets and give them chance to show their hidden talents. </p>
+                <a href="#" class="text-blue-600 hover:underline">Coming soon</a>
+            </div>
+
+            <!-- Event 3: Techcraft -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Techcraft</h3>
+                <p class="text-gray-600 mb-4">Techcraft is a flagship technical event by TESA, and it is one of the premiere technical events in Pune. Participate to discover amazing world of tech!</p>
+                <a href="#techcraft" class="text-blue-600 hover:underline">Learn More</a>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<section class="bg-white py- my-10" id="#techcraft">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-8">Techcraft Events</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Event 1: Digitrix -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Digitrix</h3>
+                <p class="text-gray-600 mb-4">Engage in a digital logic and communication adventure within the electronics lab. Solve MOSFET and IC-related tasks in an enjoyable and interactive way.</p>
+                <p class="text-gray-600">Winners will be given titles like MOSFET Mastermind and IC Intellect.</p>
+            </div>
+
+            <!-- Event 2: Career Simulation (Mock Placement) -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Career Simulation (Mock Placement)</h3>
+                <p class="text-gray-600 mb-4">Step into the shoes of an electronics core engineer, project manager, or other core roles. Participate in a mock job interview, gaining insights into real-world job scenarios.</p>
+            </div>
+
+            <!-- Event 3: ElectroHunt -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">ElectroHunt</h3>
+                <p class="text-gray-600 mb-4">Embark on a quest to locate electronic equipment based on clues provided. Use your analytical skills to uncover hidden treasures.</p>
+                <p class="text-gray-600">Example Clue: "I'm a tiny device with legs of three, In circuits, I'm where electrons want to be. Controlling voltage is my claim to fame, Find me in the lab where circuits play their game. Answer: MOSFET"</p>
+            </div>
+
+            <!-- Event 4: EduComix -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">EduComix</h3>
+                <p class="text-gray-600 mb-4">Educate and entertain as you take on the challenge of teaching a technical topic with a humorous and engaging twist, using memes and creativity to make learning fun.</p>
+            </div>
+
+            <!-- Event 5: Shutter UP -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Shutter UP</h3>
+                <p class="text-gray-600 mb-4">Showcase your photography and videography skills in a thrilling competition that combines the art of capturing stills and motion.</p>
+            </div>
+
+            <!-- Event 6: Code Crusaders (Bug Bounty) -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Code Crusaders (Bug Bounty)</h3>
+                <p class="text-gray-600 mb-4">Dive into coding languages like C, C++, Python, and Java to hunt for and fix bugs. Be rewarded for your coding prowess.</p>
+            </div>
+
+            <!-- Event 7: BotExpo -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">BotExpo</h3>
+                <p class="text-gray-600 mb-4">Witness innovation in action as multiple BE projects and robotics creations take center stage in an impressive robot exhibition.</p>
+                <p class="text-gray-600">If possible, set up a VR station where participants can experience immersive virtual reality environments or create their own VR content.</p>
+            </div>
+
+            <!-- Event 8: Tech Charades -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Tech Charades</h3>
+                <p class="text-gray-600 mb-4">Challenge your technical intuition in a game of charades where you act out complex tech terms and concepts without speaking.</p>
+            </div>
+
+            <!-- Event 9: TechQuest -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">TechQuest</h3>
+                <p class="text-gray-600 mb-4">Engage in spirited discussions and debates on technical topics, putting your knowledge and persuasion skills to the test.</p>
+                <p class="text-gray-600">In the last round, collaborate with peers to dissect and solve real-world electronic industry challenges in a competitive case study competition in collaboration with a Start-Up.</p>
+            </div>
+
+            <!-- Event 10: PCB Wars -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">PCB Wars</h3>
+                <p class="text-gray-600 mb-4">Showcase your PCB designing skills in a fierce competition, where precision and creativity reign supreme.</p>
+            </div>
+
+            <!-- Event 11: Tech Startup Pitch -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Tech Startup Pitch</h3>
+                <p class="text-gray-600 mb-4">Students with entrepreneurial aspirations pitch their tech startup ideas to a panel of judges, similar to the TV show "Shark Tank." The most innovative and feasible ideas win.</p>
+            </div>
+
+            <!-- Event 12: Tech Talk Show -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Tech Talk Show</h3>
+                <p class="text-gray-600 mb-4">A live talk show featuring a guest speaker from the tech industry, discussing the latest trends, innovations, and career opportunities in tech.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<footer class="bg-red-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+    <div class="px-4 py-12 mx-auto max-w-screen-xl">
+        <div class="grid grid-cols-2 gap-8 lg:grid-cols-4">
+            <div class="mb-6 lg:mb-0">
+                <a href="#" class="flex items-center text-2xl font-semibold text-gray-900 dark:text-white">
+                    <img src="https://flowbite.com/docs/images/logo.svg" class="w-8 h-8 mr-2" alt="Flowbite">
+                    TESA, PVG
+                </a>
+                <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Department of Electronics and Telecommunication, <br> PVG's College of Engineering and Technology.</p>
+            </div>
+            <div class="space-y-2 text-sm">
+                <p class="text-base font-semibold tracking-wide text-gray-900 dark:text-white">Explore</p>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">Home</a>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">Events</a>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">People</a>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">Contact</a>
+            </div>
+            <div class="space-y-2 text-sm">
+                <p class="text-base font-semibold tracking-wide text-gray-900 dark:text-white">Legal</p>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">Privacy Policy</a>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">Terms of Service</a>
+            </div>
+            <div class="space-y-2 text-sm">
+                <p class="text-base font-semibold tracking-wide text-gray-900 dark:text-white">Follow Us</p>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">Twitter</a>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">Facebook</a>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">Instagram</a>
+            </div>
+        </div>
+        <div class="mt-10 border-t border-gray-200 dark:border-gray-700 pt-6">
+            <p class="text-base font-medium text-gray-400">© 2023 TESA, PVG. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+</body>
+
+</html>

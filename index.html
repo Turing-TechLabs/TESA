@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"  rel="stylesheet" />
+</head>
+<style>
+    body {
+      padding-top: 64px; /* Adjust the value to match the height of your navigation bar */
+      background-color: #f7fafc; /* Set a light background color */
+      scroll-behavior: smooth; /* Add a transition effect when scrolling */
+      /* Add animations */
+        animation-name: fadein;
+        animation-duration: 5s;
+
+
+    }
+
+    /* Style for the carousel container */
+    .carousel-container {
+      position: relative;
+    }
+
+    /* Style for the overlay */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+      z-index: 1;
+
+    }
+
+    /* Style for the text */
+    .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white; /* Text color */
+      text-align: center;
+      z-index: 2;
+      padding: 20px;
+    }
+
+    /* #aboutimg {
+        background: url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg') no-repeat;
+  background-size: cover;
+    } */
+  </style>
+<body class="dark:bg-gray-900 dark:text-white"> <!-- Apply dark mode to the entire body -->
+
+    
+<nav class="bg-white dark:bg-gray-900 fixed w-full z-30 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="https://flowbite.com/" class="flex items-center">
+        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo">
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">TESA, PVG</span>
+    </a>
+    <div class="flex md:order-2">
+        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
+        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+    </div>
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="./events.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover-bg-gray-700 dark:hover-text-white md:dark-hover-bg-transparent dark:border-gray-700">Events</a>
+        </li>
+        <li>
+          <a href="./team.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover-bg-transparent md:hover-text-blue-700 md:p-0 md:dark:hover-text-blue-500 dark:text-white dark:hover-bg-gray-700 dark:hover-text-white md:dark-hover-bg-transparent dark:border-gray-700">People</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover-bg-transparent md:hover-text-blue-700 md:p-0 md:dark:hover-text-blue-500 dark:text-white dark:hover-bg-gray-700 dark:hover-text-white md:dark-hover-bg-transparent dark:border-gray-700">Contact</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+  <style>
+    #wall {   
+        background-image: url('./light-bulb-lightbulb-bulb-electricity.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        animation-name: fadein;
+        animation-duration: 5s;
+    }
+    #wall1 {   
+        background-image: url('./PVGTESAIMG.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        animation-name: fadein;
+        animation-duration: 5s;
+    }
+    #timeline {
+        /* Corners rounded and opacity low */
+        border-radius: 10px;
+        opacity: 0.9;
+    }
+    #timeline h3{
+        /* Change font color  */
+        color: #000000;
+        margin: 5%;
+    }
+  </style>
+
+ 
+
+  <section class="bg-gray-500 bg-blend-multiply" id="wall">
+    <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Igniting Innovations.</h1>
+        <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">At TESA, we are dedicated to cultivating an environment where technology, innovation, and community engagement converge to unlock long-term value and drive growth.</p>
+        <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                Get started
+                <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+            <a href="#" class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                Learn more
+            </a>  
+        </div>
+    </div>
+</section>
+</div>
+
+
+<section class="bg-blue-900 text-white" id="wall1">
+    <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none">About TESA</h1>
+        <p class="mb-8 text-lg font-normal text-gray-200 lg:text-xl sm:px-16 lg:px-48">The Electronics and Telecommunication Students' Association (TESA) at PVG's College of Engineering and Technology is dedicated to fostering innovation, learning, and community engagement within the field of Electronics and Telecommunication.</p>
+        <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                Get started
+                <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+        </div>
+        
+        <br>
+        <div style="background-color: #cad5e2; padding: 10%;" id="timeline">
+            <h3 class="mb-4 text-2xl font-extrabold tracking-tight leading-none">Previously by TESA</h3>
+            <ol class="relative border-l border-gray-200 dark:border-gray-700">
+                <li class="mb-10 ml-6">
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-400 rounded-full -left-3 ring-8 ring-gray-400 dark:ring-gray-900 dark:bg-blue-900">
+                        <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                        </svg>
+                    </span>
+                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Traditional Day and Farewell Party (May 10, 2022)</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">TESA organized a memorable Traditional Day and Farewell Party for the BE E & TC students, creating lasting memories and celebrating their journey.</p>
+                </li>
+                <li class="mb-10 ml-6">
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-400 rounded-full -left-3 ring-8 ring-gray-400 dark:ring-gray-900 dark:bg-blue-900">
+                        <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                        </svg>
+                    </span>
+                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Technovation 2K22 (May 6-7, 2022)</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">TESA hosted a National-level Circuit Design and Simulation Competition and Business Ideation Competition, welcoming students from SE, TE, and BE E&T C programs. Distinguished judges, Mr. Bhavin Shah and Mr. Akhilesh Deo, evaluated the projects.</p>
+                </li>
+                <li class="mb-10 ml-6">
+                    <span class="absolute flex items-cener justify-center w-6 h-6 bg-blue-400 rounded-full -left-3 ring-8 ring-gray-400 dark:ring-gray-900 dark:bg-blue-900">
+                        <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                        </svg>
+                    </span>
+                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Versatalia - IEEE Project Competition (April 30, 2022)</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">In collaboration with the Electrical and IT Department students' association, TESA organized the National-Level IEEE Project Competition, Versatalia, showcasing innovative projects and ideas.</p>
+                </li>
+                <li class="mb-10 ml-6">
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-400 rounded-full -left-3 ring-8 ring-gray-400 dark:ring-gray-900 dark:bg-blue-900">
+                        <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                        </svg>
+                    </span>
+                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Faculty Badminton Competition (October 11, 2021)</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">TESA organized a friendly badminton competition for the faculty members of the E & TC department, promoting sportsmanship and camaraderie.</p>
+                </li>
+                <li class="mb-10 ml-6">
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-400 rounded-full -left-3 ring-8 ring-gray-400 dark:ring-gray-900 dark:bg-blue-900">
+                        <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                        </svg>
+                    </span>
+                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Group Discussion Competition (August 28, 2021)</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">TESA hosted a thought-provoking Group Discussion competition for students, fostering an environment of meaningful dialogue and intellectual exchange.</p>
+                </li>
+                <li class="mb-10 ml-6">
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-400 rounded-full -left-3 ring-8 ring-gray-400 dark:ring-gray-900 dark:bg-blue-900">
+                        <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                        </svg>
+                    </span>
+                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Blood Donation Camp (August 14, 2021)</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">In collaboration with the NSS unit, TESA organized a Blood Donation Camp, contributing to a noble cause and promoting community welfare.</p>
+                </li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+    <div class="px-4 py-12 mx-auto max-w-screen-xl">
+        <div class="grid grid-cols-2 gap-8 lg:grid-cols-4">
+            <div class="mb-6 lg:mb-0">
+                <a href="#" class="flex items-center text-2xl font-semibold text-gray-900 dark:text-white">
+                    <img src="https://flowbite.com/docs/images/logo.svg" class="w-8 h-8 mr-2" alt="Flowbite">
+                    TESA, PVG
+                </a>
+                <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Department of Electronics and Telecommunication, <br> PVG's College of Engineering and Technology.</p>
+            </div>
+            <div class="space-y-2 text-sm">
+                <p class="text-base font-semibold tracking-wide text-gray-900 dark:text-white">Explore</p>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">Home</a>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">Events</a>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">People</a>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">Contact</a>
+            </div>
+            <div class="space-y-2 text-sm">
+                <p class="text-base font-semibold tracking-wide text-gray-900 dark:text-white">Legal</p>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">Privacy Policy</a>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">Terms of Service</a>
+            </div>
+            <div class="space-y-2 text-sm">
+                <p class="text-base font-semibold tracking-wide text-gray-900 dark:text-white">Follow Us</p>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">Twitter</a>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">Facebook</a>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">Instagram</a>
+            </div>
+        </div>
+        <div class="mt-10 border-t border-gray-200 dark:border-gray-700 pt-6">
+            <p class="text-base font-medium text-gray-400">© 2023 TESA, PVG. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+
+</body>
+</html>
